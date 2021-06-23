@@ -37,7 +37,7 @@ image:
   tag: 0.6
   pullPolicy: IfNotPresent
 imagePullSecrets:
-  name: registry-lab-sprybts-net
+  - name: registry-lab-sprybts-net
 
 # Expose pods with service on port 25
 service:
