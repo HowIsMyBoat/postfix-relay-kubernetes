@@ -33,9 +33,11 @@ serviceAccount:
 
 # Docker image
 image:
-  repository: eldada-docker-examples.bintray.io/postfix-relay
+  repository: registry.lab.sprybts.net/postfix-relay
   tag: 0.6
   pullPolicy: IfNotPresent
+imagePullSecrets:
+  name: registry-lab-sprybts-net
 
 # Expose pods with service on port 25
 service:
