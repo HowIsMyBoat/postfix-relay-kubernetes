@@ -19,7 +19,10 @@ spec:
         app: {{ template "postfix.name" . }}
         release: {{ .Release.Name }}
     spec:
-      serviceAccountName: {{ template "postfix.serviceAccountName" . }}
+    {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}      serviceAccountName: {{ template "postfix.serviceAccountName" . }}
       containers:
       - name: {{ template "postfix.name" . }}
         image: '{{ .Values.image.repository }}:{{ .Values.image.tag }}'
