@@ -8,5 +8,5 @@ keywords:
 sources:
 - https://github.com/howismyboat/postfix-relay-kubernetes
 maintainers:
-- name: Andreew Kent
+- name: Andrew Kent
   email: andrew@howismyboat.com
