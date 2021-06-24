@@ -56,7 +56,7 @@ smtp:
 # Optional extra configuration to add or edit in /etc/postfix/main.cf
 # A single string with key=value separated by a semicolon char (;)
 # Example: postfixCustomConfig: "key1 = value1; key2 = value2; key3 = value3"
-postfixCustomConfig:
+postfixCustomConfig: 'smtp_tls_security_level = may'
 
 # Resources needed for the pods
 resources:
