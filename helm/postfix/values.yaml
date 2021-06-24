@@ -33,11 +33,11 @@ serviceAccount:
 
 # Docker image
 image:
-  repository: registry.lab.sprybts.net/postfix-relay
+  repository: myRegistry/postfix-relay
   tag: 0.6
   pullPolicy: IfNotPresent
 imagePullSecrets:
-  - name: registry-lab-sprybts-net
+  - name: myRegistry
 
 # Expose pods with service on port 25
 service:
