@@ -62,6 +62,16 @@ spec:
         ports:
           - name: smtp
             containerPort: 25
+        livenessProbe:
+          tcpSocket:
+            port: 25
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        readinessProbe:
+          tcpSocket:
+            port: 25
+          initialDelaySeconds: 15
+          periodSeconds: 20
         resources:
 {{ toYaml .Values.resources | indent 10 }}
     {{- with .Values.nodeSelector }}
